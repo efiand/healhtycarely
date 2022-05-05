@@ -1,0 +1,11 @@
+<article
+	class="card {{ lead ? 'card--with-lead' }} {{ icon ? 'card--with-icon' }} {{ cssMix }}"
+	{{ icon ? 'style="--icon: url(../images/sprite.min.svg#' ~ icon ~ ')"' }}
+>
+	{% if lead %}
+		<b class="card__lead">{{ lead }}</b>
+	{% endif %}
+
+	<h3 class="card__heading">{{ heading }}</h3>
+	<p class="card__description">{{ description }}</p>
+</article>

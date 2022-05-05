@@ -1,0 +1,30 @@
+.nav-menu {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	list-style: none;
+}
+
+.nav-menu__link {
+	display: block;
+	padding: 12px 20px;
+	font-weight: 500;
+	text-decoration: none;
+	border-radius: 10px;
+	outline-offset: -2px;
+
+	&--primary {
+		padding: 12px 22px;
+		color: var(--color-white);
+		background-color: var(--color-primary);
+		outline-offset: 2px;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+	}
+}

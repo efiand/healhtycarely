@@ -1,0 +1,31 @@
+<section class="sitemap {{ cssMix }}">
+	<h2 class="visually-hidden">{{ heading|punctify }}</h2>
+
+	<ul class="sitemap__groups">
+		{% for group in groups %}
+			<li class="sitemap__group">
+				<h3 class="sitemap__heading">{{ group.title }}</h3>
+
+				<ul class="sitemap__{{ group.iconable ? 'iconable-' }}list">
+					{% for link in group.list %}
+						<li class="sitemap__{{ group.iconable ? 'iconable-' }}item">
+							{% if group.iconable %}
+								<a
+									class="sitemap__iconable-link"
+									href="{{ link.url }}"
+									style="--icon: url(../{{ root }}images/sprite.min.svg#{{ link.icon }})"
+								>
+									<span class="visually-hidden">{{ link.title|punctify }}</span>
+								</a>
+							{% else %}
+								<a class="sitemap__link" href="{{ link.url }}">
+									{{ link.title }}
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+</section>

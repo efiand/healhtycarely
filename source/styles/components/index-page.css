@@ -1,0 +1,73 @@
+.index-page {
+	padding-bottom: 252px;
+
+	@media (--desktop) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.index-page__promo {
+	margin-top: 100px;
+
+	@media (--desktop) {
+		width: 640px;
+	}
+}
+
+.index-page__promo-persons {
+	margin-top: 25px;
+
+	@media (--desktop) {
+		width: 560px;
+	}
+}
+
+.index-page__steps {
+	width: 100%;
+	margin: 100px 0;
+}
+
+.index-page__find {
+	margin: 80px 0;
+
+	@media (--desktop) {
+		width: 534px;
+	}
+}
+
+.index-page__find-persons {
+	margin: 80px 0 150px;
+
+	@media (--desktop) {
+		width: 576px;
+	}
+}
+
+.index-page__schedule-picture {
+	@media (--desktop) {
+		width: 626px;
+	}
+
+	& img {
+		display: block;
+	}
+}
+
+.index-page__schedule {
+	@media (--desktop) {
+		width: 480px;
+		margin-right: 70px;
+	}
+}
+
+.index-page__rating {
+	width: 100%;
+	margin: 150px 0;
+}
+
+.index-page__reviews {
+	width: 100%;
+}

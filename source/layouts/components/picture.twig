@@ -5,9 +5,9 @@
 		<source type="image/webp" srcset="{{ getSrcset(webpset, 1) }}">
 	{% endif %}
 	<img
-		src="{{ srcset[0] }}"
+		src="{{ srcset[0].url }}"
 		{{ srcset.length > 1 ? 'srcset="' ~ getSrcset(srcset, 2) ~ '"' }}
-		alt="{{ alt }}"
+		alt="{{ title|punctify }}"
 		loading="lazy"
 	/>
 </picture>

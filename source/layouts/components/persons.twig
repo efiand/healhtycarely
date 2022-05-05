@@ -1,0 +1,11 @@
+{% from '../common/macro.twig' import component %}
+
+<div class="persons {{ cssMix }}" style="--top: {{ card.top }}px; --left: {{ card.left }}px;">
+	{{ component(card.heading ? 'persons-listcard' : 'persons-card', card, 'persons__card') }}
+
+	{{ component('picture', picture, 'persons__picture') }}
+
+	{% with circle %}
+		<div class="persons__circle" style="--left: {{ left }}px; --width: {{ width }}px; --height: {{ height }}px;"></div>
+	{% endwith %}
+</div>

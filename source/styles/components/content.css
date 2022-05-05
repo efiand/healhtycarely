@@ -1,0 +1,16 @@
+.content__section-header {
+	margin: 0 0 25px;
+}
+
+.content__description {
+	margin: 0 0 28px;
+	color: var(--color-grey);
+
+	&--condensed {
+		letter-spacing: 0.02em;
+	}
+}
+
+.content__checklist {
+	margin: 0 0 26px;
+}

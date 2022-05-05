@@ -1,0 +1,30 @@
+.section-header__prefix {
+	margin: 0 0 10px;
+	font-weight: 700;
+	color: var(--color-primary);
+}
+
+.section-header__heading {
+	margin: 0;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: 0.015em;
+
+	&--lead {
+		font-size: 54px;
+		line-height: 70px;
+		letter-spacing: 0.02em;
+	}
+
+	& em {
+		font-style: normal;
+		color: var(--color-primary);
+	}
+}
+
+.section-header__description {
+	margin: 10px 0 0;
+	letter-spacing: 0.015em;
+	color: var(--color-grey);
+}

@@ -1,1 +1,11 @@
-<footer class="page-footer {{ cssMix }}"></footer>
+{% from '../common/macro.twig' import component %}
+
+<footer class="page-footer {{ cssMix }}">
+	<div class="page-footer__description-wrapper">
+		{{ component('logo', logo, 'page-footer__logo') }}
+
+		<p class="page-footer__description">{{ description }}</p>
+	</div>
+
+	{{ component('sitemap', sitemap, 'page-footer__sitemap') }}
+</footer>

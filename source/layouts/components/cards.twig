@@ -1,0 +1,19 @@
+{% from '../common/macro.twig' import component %}
+
+{% set listLayout %}
+	{% for card in list %}
+		<li class="cards__item">
+			{{ component('card', card) }}
+		</li>
+	{% endfor %}
+{% endset %}
+
+<section class="cards {{ cssMix }}">
+	{{ component('section-header', header, 'cards__section-header') }}
+
+	{% if ordered %}
+		<ol class="cards__list">{{ listLayout }}</ol>
+	{% else %}
+		<ul class="cards__list">{{ listLayout }}</ul>
+	{% endif %}
+</section>

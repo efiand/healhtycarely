@@ -1,0 +1,10 @@
+.logo {
+	display: inline-block;
+	vertical-align: baseline;
+	outline-offset: 6px;
+}
+
+.logo__image {
+	display: block;
+	max-width: none;
+}

@@ -1,19 +1,37 @@
 html {
+	--color-primary: #4d77ff;
+	--color-primary-15: rgba(77, 119, 255, 0.15);
+	--color-black: #121212;
+	--color-black-10: rgba(18, 18, 18, 0.1);
+	--color-grey: #696969;
 	--color-white: #ffffff;
-	min-width: 320px;
+	--color-silver: #c7c9d9;
+	--color-silver-15: rgba(199, 201, 217, 0.15);
+	--color-silver-light: #edf1ff;
 	overflow-x: hidden;
 	overflow-anchor: none;
 	scroll-behavior: smooth;
-	font-size: 16px;
-	line-height: 1.2;
-	font-family: "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: "Manrope", "Arial", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: antialiased;
+	letter-spacing: 0.03em;
+	color: var(--color-black);
+	background-color: var(--color-primary-15);
 	-webkit-tap-highlight-color: transparent;
 }
 
 body {
-	margin: 0;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	overflow-x: hidden;
+	background-color: var(--color-white);
+
+	@media (min-width: 1440px) {
+		box-shadow: 0 0 100vw var(--color-primary);
+	}
 }
 
 a,
@@ -58,10 +76,6 @@ textarea {
 		opacity: 0.3;
 	}
 
-	&:-webkit-autofill {
-		box-shadow: none;
-	}
-
 	&::placeholder {
 		color: inherit;
 		opacity: 0.3;
@@ -84,6 +98,10 @@ input {
 	&::-webkit-search-results-decoration {
 		display: none;
 	}
+
+	&:-webkit-autofill {
+		box-shadow: none;
+	}
 }
 
 img {
@@ -96,7 +114,7 @@ svg {
 }
 
 :focus {
-	outline: 2px solid;
+	outline: 2px solid var(--color-primary);
 	outline-offset: 2px;
 
 	@supports selector(:focus-visible) {
@@ -105,6 +123,6 @@ svg {
 }
 
 :focus-visible {
-	outline: 2px solid;
+	outline: 2px solid var(--color-primary);
 	outline-offset: 2px;
 }

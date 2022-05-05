@@ -10,7 +10,7 @@ export const getPageData = async (page) => {
 		root: getPathToRoot(page)
 	};
 
-	const getCommonData = await import('./main.js');
+	const getCommonData = await import('../data/common.js');
 	data = {
 		...data,
 		...getCommonData.default(data)
@@ -19,10 +19,10 @@ export const getPageData = async (page) => {
 	let getData = () => ({});
 	let statusCode = StatusCodes.OK;
 	try {
-		getData = await import(`../pages/${page}.js`);
+		getData = await import(`../data/pages/${page}.js`);
 	} catch (err) {
 		statusCode = StatusCodes.NOT_FOUND;
-		getData = await import('../pages/404.js');
+		getData = await import('../data/pages/404.js');
 	}
 
 	return {

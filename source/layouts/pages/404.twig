@@ -1,1 +1,10 @@
 {% extends '../common/layout.twig' %}
+{% from '../common/macro.twig' import component %}
+
+{% block main %}
+	<main class="inner-page page__main">
+		<h1 class="visually-hidden">{{ title }}.</h1>
+
+		{{ component('content', content) }}
+	</main>
+{% endblock %}

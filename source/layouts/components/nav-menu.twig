@@ -1,0 +1,7 @@
+<ul class="nav-menu {{ cssMix }}">
+	{% for link in menu %}
+		<li class="nav-menu__item">
+			<a class="nav-menu__link {{ link.primary ? 'nav-menu__link--primary' }}" href="{{ link.url }}">{{ link.title }}</a>
+		</li>
+	{% endfor %}
+</ul>

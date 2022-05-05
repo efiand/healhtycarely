@@ -1,0 +1,57 @@
+.persons-listcard {
+	padding: 18px 30px;
+	background-color: var(--color-white);
+	border-radius: 10px;
+	box-shadow: -4px -10px 50px 0 var(--color-black-10);
+}
+
+.persons-listcard__heading {
+	margin: 0;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.persons-listcard__description {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--color-grey);
+}
+
+.persons-listcard__list {
+	margin: 20px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.persons-listcard__item {
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	gap: 0 10px;
+	margin-bottom: 16px;
+
+	& .persons-listcard__heading {
+		margin: 4px 0 -8px;
+	}
+}
+
+.persons-listcard__picture {
+	grid-row: span 2;
+
+	& img {
+		border-radius: 50%;
+	}
+}
+
+.persons-listcard__link {
+	display: block;
+	padding: 8px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration: none;
+	text-align: center;
+	color: var(--color-primary);
+	background-color: var(--color-silver-light);
+	border-radius: 10px;
+}

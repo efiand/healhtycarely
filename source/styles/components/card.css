@@ -1,0 +1,43 @@
+.card {
+	box-sizing: border-box;
+	padding: 50px 40px 34px;
+
+	&--with-lead {
+		padding-bottom: 44px;
+		text-align: center;
+
+		& .card__heading {
+			margin: 12px 0 0;
+		}
+	}
+
+	&--with-icon::before {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin: 0 0 14px;
+		background-image: var(--icon);
+		background-size: 40px;
+	}
+}
+
+.card__lead {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+}
+
+.card__heading {
+	margin: 0 0 12px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.card__description {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--color-grey);
+}

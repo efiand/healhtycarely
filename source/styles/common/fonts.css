@@ -1,15 +1,31 @@
 @font-face {
 	font-weight: 400;
 	font-style: normal;
-	font-family: "PT Sans";
+	font-family: "Manrope";
 	font-display: swap;
-	src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");
+	src: local("Manrope Regular"), url("../fonts/manrope-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-weight: 500;
+	font-style: normal;
+	font-family: "Manrope";
+	font-display: swap;
+	src: local("Manrope Medium"), url("../fonts/manrope-medium.woff2") format("woff2");
+}
+
+@font-face {
+	font-weight: 600;
+	font-style: normal;
+	font-family: "Manrope";
+	font-display: swap;
+	src: local("Manrope SemiBold"), url("../fonts/manrope-semibold.woff2") format("woff2");
 }
 
 @font-face {
 	font-weight: 700;
 	font-style: normal;
-	font-family: "PT Sans";
+	font-family: "Manrope";
 	font-display: swap;
-	src: local("PT Sans"), url("../fonts/ptsans-700.woff2") format("woff2");
+	src: local("Manrope Bold"), url("../fonts/manrope-bold.woff2") format("woff2");
 }

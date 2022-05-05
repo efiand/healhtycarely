@@ -1,0 +1,20 @@
+{% from '../common/macro.twig' import component %}
+
+<article class="persons-listcard {{ cssMix }}">
+	<h2 class="persons-listcard__heading">{{ heading }}</h2>
+	<p class="persons-listcard__description">{{ description }}</p>
+
+	<ul class="persons-listcard__list">
+		{% for doctor in list %}
+			<li class="persons-listcard__item">
+				{{ component('picture', doctor.picture, 'persons-listcard__picture') }}
+
+				<h3 class="persons-listcard__heading">{{ doctor.name }}</h3>
+
+				<p class="persons-listcard__description">{{ doctor.description }}</p>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<a class="persons-listcard__link" href="{{ link.url }}">{{ link.title }}</a>
+</article>

@@ -1,7 +1,14 @@
 .page {
 	display: flex;
 	flex-direction: column;
+	box-sizing: border-box;
 	min-height: 100vh;
+	margin: 0 auto;
+	padding: 40px 20px 104px;
+
+	@media (--desktop) {
+		width: 1280px;
+	}
 }
 
 .page__footer {

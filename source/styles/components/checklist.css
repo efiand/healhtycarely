@@ -1,0 +1,25 @@
+.checklist {
+	padding: 0;
+	list-style: none;
+}
+
+.checklist__item {
+	position: relative;
+	padding: 2px 0 2px 36px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+
+	& + & {
+		margin-top: 14px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		background-image: url("../images/sprite.min.svg#check");
+	}
+}

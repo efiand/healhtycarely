@@ -59,7 +59,7 @@
 		"cross-env": "7.0.3",
 		"http-status-codes": "2.2.0"
 	},
-	"name": "gulp-template",
+	"name": "healhtycarely",
 	"pre-commit": "lint",
 	"private": true,
 	"scripts": {

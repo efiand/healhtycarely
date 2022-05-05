@@ -1,4 +1,8 @@
-# Шаблон для сборки статических страниц
+# HealhtyCarely Landing Page
+
+[Опубликованная версия](https://efiand.github.io/healhtycarely).
+
+---
 
 
 ## Используемые инструменты

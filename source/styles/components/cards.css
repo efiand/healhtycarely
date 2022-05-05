@@ -1,0 +1,22 @@
+.cards__section-header {
+	margin: 0 0 50px;
+	text-align: center;
+}
+
+.cards__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: -30px 0 0 -30px;
+	padding: 0;
+	list-style: none;
+}
+
+.cards__item {
+	width: 287px;
+	max-width: 100%;
+	margin: 30px 0 0 30px;
+	border-top: 3px solid var(--color-primary);
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 10px 40px 0 var(--color-black-10);
+}

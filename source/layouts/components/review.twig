@@ -1,0 +1,14 @@
+{% from '../common/macro.twig' import component %}
+
+<figure class="review {{ cssMix }}">
+	{{ component('picture', author.picture, 'review__picture') }}
+
+	<blockquote class="review__quote">
+		<p class="review__text">{{ review }}</p>
+
+		<cite class="review__author">
+			<span class="review__author-name">{{ author.name }}</span>
+			<span class="review__author-description">{{ author.about }}</span>
+		</cite>
+	</blockquote>
+</figure>

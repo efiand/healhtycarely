@@ -1,0 +1,33 @@
+.slider {
+	position: relative;
+}
+
+.slider__header {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.slider__list {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: 80px 0 0;
+	list-style: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		width: 100vw;
+		height: 350px;
+		background-color: var(--color-silver-light);
+	}
+}
+
+.slider__slide {
+	--height: 360px;
+	--rows: 4;
+	margin: 0;
+}

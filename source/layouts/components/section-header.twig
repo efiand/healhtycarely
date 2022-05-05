@@ -1,0 +1,13 @@
+<header class="section-header {{ cssMix }}">
+	{% if prefix %}
+		<p class="section-header__prefix">{{ prefix }}</p>
+	{% endif %}
+
+	<h2 class="section-header__heading {{ lead ? 'section-header__heading--lead' }}">
+		{{ heading }}
+	</h2>
+
+	{% if description %}
+		<p class="section-header__description">{{ description }}</p>
+	{% endif %}
+</header>

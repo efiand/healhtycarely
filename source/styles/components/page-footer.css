@@ -1,0 +1,17 @@
+.page-footer {
+	display: grid;
+	gap: 140px;
+
+	@media (--desktop) {
+		grid-template-columns: 440px 1fr;
+	}
+}
+
+.page-footer__logo {
+	margin: 8px 0;
+}
+
+.page-footer__description {
+	margin: 0;
+	letter-spacing: 0.015em;
+}

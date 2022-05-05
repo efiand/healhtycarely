@@ -1,0 +1,54 @@
+.persons {
+	--top: 0;
+	--left: 0;
+	position: relative;
+	z-index: 1;
+	display: flex;
+}
+
+.persons__card {
+	@media (--desktop) {
+		position: absolute;
+		top: var(--top);
+		left: var(--left);
+		max-width: 200px;
+	}
+}
+
+.persons__picture {
+	margin-left: auto;
+
+	& img {
+		display: block;
+	}
+}
+
+.persons__circle {
+	--top: 0;
+	--left: 0;
+	--width: 0;
+	--height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: var(--left);
+	z-index: -1;
+	display: none;
+	width: var(--width);
+	height: var(--height);
+	overflow: hidden;
+
+	@media (--desktop) {
+		display: block;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--width);
+		background-color: var(--color-primary);
+		border-radius: 50%;
+	}
+}

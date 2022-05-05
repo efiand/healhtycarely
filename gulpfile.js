@@ -81,7 +81,21 @@ export const buildLayouts = () => src(Entry.LAYOUTS)
 
 		return { ...data, IS_DEV };
 	}))
-	.pipe(twig())
+	.pipe(twig({
+		filters: [
+			{
+				func(str, args) {
+					const [sign = '.'] = args || [];
+
+					if ((/(\.|\?|!|,|:|…)$/).test(str)) {
+						return str;
+					}
+					return `${str}${sign}`;
+				},
+				name: 'punctify'
+			}
+		]
+	}))
 	.pipe(posthtml())
 	.pipe(bemValidator())
 	.pipe(gulpIf(process.env.NODE_ENV !== 'test', dest(Destination.ROOT)));

@@ -1,0 +1,37 @@
+.persons-card {
+	padding: 16px;
+	text-align: center;
+	background-color: var(--color-white);
+	border-radius: 10px;
+	box-shadow: 0 -24px 34px 0 var(--color-silver-15);
+}
+
+.persons-card__picture img {
+	border-radius: 50%;
+}
+
+.persons-card__name {
+	margin: 5px 0;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.persons-card__description {
+	margin: 0 0 10px;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--color-grey);
+}
+
+.persons-card__link {
+	display: block;
+	padding: 10px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration: none;
+	text-align: center;
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border-radius: 10px;
+}

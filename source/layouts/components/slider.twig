@@ -1,0 +1,13 @@
+{% from '../common/macro.twig' import component %}
+
+<section class="slider {{ cssMix }}">
+	{{ component('section-header', header, 'slider__header') }}
+
+	<ul class="slider__list">
+		<li class="slider__item">
+			{% for slide in slides %}
+				{{ component(slot, slide, 'slider__slide') }}
+			{% endfor %}
+		</li>
+	</ul>
+</section>

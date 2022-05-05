@@ -1,1 +1,12 @@
-<header class="page-header {{ cssMix }}"></header>
+{% from '../common/macro.twig' import component %}
+
+<header class="page-header {{ cssMix }}">
+	{{ component('logo', logo, 'page-header__logo') }}
+
+	<nav class="page-header__main-nav">
+		{{ component('nav-menu', { menu: mainNav }, 'page-header__nav-menu') }}
+	</nav>
+	<nav class="page-header__user-nav">
+		{{ component('nav-menu', { menu: userNav }, 'page-header__nav-menu') }}
+	</nav>
+</header>

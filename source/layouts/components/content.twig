@@ -1,0 +1,17 @@
+{% from '../common/macro.twig' import component %}
+
+<section class="content {{ cssMix }}">
+	{{ component('section-header', header, 'content__section-header') }}
+
+	<p class="content__description {{ not header.lead ? 'content__description--condensed' }}">
+		{{ description }}
+	</p>
+
+	{% if checklist %}
+		{{ component('checklist', { checklist: checklist }, 'content__checklist') }}
+	{% endif %}
+
+	{% if link %}
+		<a class="content__link button" href="{{ link.url }}">{{ link.title }}</a>
+	{% endif %}
+</section>

@@ -1,7 +1,25 @@
 {% extends '../common/layout.twig' %}
+{% from '../common/macro.twig' import component %}
 
 {% block main %}
 	<main class="index-page page__main">
-		<h1 class="visually-hidden">{{ projectName }}</h1>
+		<h1 class="visually-hidden">{{ projectName }}.</h1>
+
+		{{ component('content', promo, 'index-page__promo') }}
+		{{ component('persons', promoPersons, 'index-page__promo-persons') }}
+
+		{{ component('cards', steps, 'index-page__steps') }}
+
+		{{ component('content', find, 'index-page__find') }}
+		{{ component('persons', findPersons, 'index-page__find-persons') }}
+
+		{{ component('picture', schedule.picture, 'index-page__schedule-picture') }}
+		{{ component('content', schedule, 'index-page__schedule') }}
+
+		{{ component('cards', rating, 'index-page__rating') }}
+
+		{% with reviews %}
+			{{ component('slider', { header: header, slides: list, slot: 'review' }, 'index-page__reviews') }}
+		{% endwith %}
 	</main>
 {% endblock %}

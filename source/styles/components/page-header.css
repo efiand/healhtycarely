@@ -1,0 +1,21 @@
+.page-header {
+	@media (--desktop) {
+		display: grid;
+		grid-template-columns: min-content 3fr 2fr;
+		gap: 20px;
+		align-items: start;
+	}
+}
+
+.page-header__logo {
+	margin: 12px 0 6px;
+	border-radius: 10px;
+}
+
+.page-header__user-nav {
+	justify-self: end;
+}
+
+.page-header__nav-menu {
+	margin: 0;
+}
