@@ -1,0 +1,13 @@
+{% macro component(is, data = {}, cssMix = '') %}
+	{% with data %}
+		{% include '../components/' ~ is ~ '.twig' with { cssMix } %}
+	{% endwith %}
+{% endmacro %}
+
+{% macro getSrcset(srcset, start = 1) %}
+	{% for item in srcset %}
+		{% if loop.index >= start -%}
+			{{ item }} {{ loop.index }}x{{ not loop.last ? ', ' }}
+		{%- endif %}
+	{% endfor %}
+{% endmacro %}

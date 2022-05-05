@@ -1,0 +1,5 @@
+{
+	"extends": [
+		"pineglade-config/stylelint-modern"
+	]
+}
