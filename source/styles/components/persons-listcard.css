@@ -52,6 +52,6 @@
 	text-decoration: none;
 	text-align: center;
 	color: var(--color-primary);
-	background-color: var(--color-silver-light);
+	background-color: var(--color-whitegrey);
 	border-radius: 10px;
 }

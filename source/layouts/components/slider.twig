@@ -10,4 +10,11 @@
 			{% endfor %}
 		</li>
 	</ul>
+
+	<button class="slider__control slider__control--prev" type="button" disabled>
+		<span class="visually-hidden">{{ Term('SLIDER_PREV')|punctify }}</span>
+	</button>
+	<button class="slider__control slider__control--next" type="button">
+		<span class="visually-hidden">{{ Term('SLIDER_NEXT')|punctify }}</span>
+	</button>
 </section>

@@ -4,10 +4,10 @@ html {
 	--color-black: #121212;
 	--color-black-10: rgba(18, 18, 18, 0.1);
 	--color-grey: #696969;
+	--color-lightgrey: #c7c9d9;
+	--color-lightgrey-15: rgba(199, 201, 217, 0.15);
+	--color-whitegrey: #edf1ff;
 	--color-white: #ffffff;
-	--color-silver: #c7c9d9;
-	--color-silver-15: rgba(199, 201, 217, 0.15);
-	--color-silver-light: #edf1ff;
 	overflow-x: hidden;
 	overflow-anchor: none;
 	scroll-behavior: smooth;

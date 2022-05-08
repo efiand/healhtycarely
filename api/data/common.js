@@ -1,6 +1,11 @@
 const projectName = 'HealhtyCarely';
 
 export default ({ page, root }) => ({
+	Term: {
+		MENU_TOGGLE: 'Toggle menu',
+		SLIDER_NEXT: 'Go to the next slide.',
+		SLIDER_PREV: 'Go to the previous slide.'
+	},
 	lang: 'en',
 	logo: {
 		current: page === 'index',

@@ -1,6 +1,6 @@
 {% from '../common/macro.twig' import component %}
 
-<header class="page-header {{ cssMix }}">
+<header class="page-header {{ cssMix }}" id="header">
 	{{ component('logo', logo, 'page-header__logo') }}
 
 	<nav class="page-header__main-nav">
@@ -9,4 +9,8 @@
 	<nav class="page-header__user-nav">
 		{{ component('nav-menu', { menu: userNav }, 'page-header__nav-menu') }}
 	</nav>
+
+	<button class="page-header__toggler" type="button" aria-expanded="false" aria-controls="header">
+		<span class="visually-hidden">{{ Term('MENU_TOGGLE')|punctify }}</span>
+	</button>
 </header>

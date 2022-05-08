@@ -3,7 +3,7 @@
 	text-align: center;
 	background-color: var(--color-white);
 	border-radius: 10px;
-	box-shadow: 0 -24px 34px 0 var(--color-silver-15);
+	box-shadow: 0 -24px 34px 0 var(--color-lightgrey-15);
 }
 
 .persons-card__picture img {

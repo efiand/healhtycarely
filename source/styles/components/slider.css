@@ -22,7 +22,7 @@
 		z-index: -1;
 		width: 100vw;
 		height: 350px;
-		background-color: var(--color-silver-light);
+		background-color: var(--color-whitegrey);
 	}
 }
 
@@ -30,4 +30,40 @@
 	--height: 360px;
 	--rows: 4;
 	margin: 0;
+}
+
+.slider__control {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	&:disabled {
+		color: var(--color-lightgrey);
+		opacity: 1;
+		cursor: not-allowed;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: currentColor;
+		mask-image: url("../images/sprite.min.svg#arrow");
+	}
+
+	&--prev {
+		right: 56px;
+
+		&::before {
+			transform: scaleX(-1);
+		}
+	}
 }

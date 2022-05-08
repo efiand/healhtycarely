@@ -36,6 +36,7 @@
 
 .review__author {
 	margin-top: auto;
+	margin-right: inherit;
 	font-weight: 700;
 	font-style: normal;
 	line-height: 1;
