@@ -1,7 +1,25 @@
 .page-header {
 	display: grid;
 	align-items: start;
-	gap: 20px;
+	gap: 10px 20px;
+	box-sizing: border-box;
+	max-height: 100vh;
+	overflow-y: auto;
+	background-color: var(--color-white);
+
+	@media (--mobile-tablet) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		padding: 18px 20px 12px;
+		box-shadow: 0 10px 40px 0 var(--color-black-10);
+	}
+
+	@media (--tablet-desktop) {
+		grid-template-columns: 3fr 2fr;
+	}
 
 	@media (--desktop) {
 		grid-template-columns: min-content 3fr 2fr;
@@ -9,13 +27,29 @@
 }
 
 .page-header__logo {
-	margin: 12px 0 6px;
+	justify-self: start;
 	border-radius: 10px;
+
+	@media (--tablet) {
+		grid-column: 1/-1;
+	}
+
+	@media (--desktop) {
+		margin: 12px 0 6px;
+	}
 }
 
-.page-header__user-nav {
-	@media (--desktop) {
-		justify-self: end;
+.page-header__nav {
+	@media (--mobile-tablet) {
+		display: none;
+		margin: 0 -20px;
+	}
+
+	&:nth-of-type(2n) {
+		@media (--tablet-desktop) {
+			justify-self: end;
+			margin-right: 0;
+		}
 	}
 }
 
@@ -25,7 +59,7 @@
 
 .page-header__toggler {
 	position: absolute;
-	top: 20px;
+	top: 17px;
 	right: 20px;
 	width: 24px;
 	height: 22px;
@@ -53,29 +87,37 @@
 
 	&::before {
 		top: 0;
-		transition: top 0.3s 0.3s ease-in-out, transform 0.3s ease-in-out;
+		transition: top 0.1s 0.1s ease-in-out, transform 0.1s ease-in-out;
 	}
 
 	&::after {
 		bottom: 0;
-		transition: bottom 0.3s 0.3s ease-in-out, transform 0.3s ease-in-out;
+		transition: bottom 0.1s 0.1s ease-in-out, transform 0.1s ease-in-out;
 	}
 }
 
 .page-header--opened {
-	& .page-header__toggler {
-		background-image: none;
+	@media (--mobile-tablet) {
+		padding-bottom: 24px;
 
-		&::before {
-			top: 9px;
-			transform: rotate(45deg);
-			transition: top 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out;
+		& .page-header__nav {
+			display: block;
 		}
 
-		&::after {
-			bottom: 9px;
-			transform: rotate(-45deg);
-			transition: bottom 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out;
+		& .page-header__toggler {
+			background-image: none;
+
+			&::before {
+				top: 9px;
+				transform: rotate(45deg);
+				transition: top 0.1s ease-in-out, transform 0.1s 0.1s ease-in-out;
+			}
+
+			&::after {
+				bottom: 9px;
+				transform: rotate(-45deg);
+				transition: bottom 0.1s ease-in-out, transform 0.1s 0.1s ease-in-out;
+			}
 		}
 	}
 }

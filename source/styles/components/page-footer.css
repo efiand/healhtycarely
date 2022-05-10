@@ -1,6 +1,11 @@
 .page-footer {
 	display: grid;
-	gap: 140px;
+	gap: 30px 140px;
+
+	@media (--mobile-tablet) {
+		padding-top: 20px;
+		border-top: 1px solid var(--color-primary);
+	}
 
 	@media (--desktop) {
 		grid-template-columns: 440px 1fr;

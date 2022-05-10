@@ -12,9 +12,11 @@
 	letter-spacing: 0.015em;
 
 	&--lead {
-		font-size: 54px;
-		line-height: 70px;
-		letter-spacing: 0.02em;
+		@media (--tablet-desktop) {
+			font-size: 54px;
+			line-height: 70px;
+			letter-spacing: 0.02em;
+		}
 	}
 
 	& em {

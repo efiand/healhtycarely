@@ -1,21 +1,27 @@
 .persons {
 	--top: 0;
-	--left: 0;
+	--right: 0;
 	position: relative;
 	z-index: 1;
-	display: flex;
+
+	@media (--tablet-desktop) {
+		display: flex;
+	}
 }
 
 .persons__card {
-	@media (--desktop) {
+	max-width: 150px;
+
+	@media (--tablet-desktop) {
 		position: absolute;
-		top: var(--top);
-		left: var(--left);
-		max-width: 200px;
+		top: 0;
+		right: 0;
+		transform: translate(var(--right), var(--top));
 	}
 }
 
 .persons__picture {
+	display: table;
 	margin-left: auto;
 
 	& img {
@@ -25,16 +31,16 @@
 
 .persons__circle {
 	--top: 0;
-	--left: 0;
+	--right: 0;
 	--width: 0;
 	--height: 100%;
 	position: absolute;
+	right: var(--right);
 	bottom: 0;
-	left: var(--left);
 	z-index: -1;
-	display: none;
 	width: var(--width);
 	height: var(--height);
+	max-height: 100%;
 	overflow: hidden;
 
 	@media (--desktop) {

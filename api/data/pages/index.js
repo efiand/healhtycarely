@@ -18,7 +18,6 @@ export default ({ root }) => ({
 		card: {
 			description: 'Select Doctors',
 			heading: 'Available Doctors',
-			left: 0,
 			link: {
 				title: 'Find Doctor',
 				url: '#!'
@@ -127,11 +126,12 @@ export default ({ root }) => ({
 					}
 				}
 			],
+			right: 374,
 			top: 36
 		},
 		circle: {
 			height: 454,
-			left: 0,
+			right: 227,
 			width: 803
 		},
 		picture: {
@@ -195,7 +195,6 @@ export default ({ root }) => ({
 	},
 	promoPersons: {
 		card: {
-			left: -46,
 			link: {
 				title: 'Make Schedule',
 				url: '#!'
@@ -253,11 +252,12 @@ export default ({ root }) => ({
 					}
 				}
 			],
-			top: 327
+			right: 462,
+			top: 326
 		},
 		circle: {
 			height: 390,
-			left: -172,
+			right: 506,
 			width: 1240
 		},
 		picture: {
@@ -390,6 +390,60 @@ export default ({ root }) => ({
 					}
 				},
 				review: '“Healthycarely is an website and mobile app for you to feel better or get medical help. We offer you a 24/7 doctor service with no appointment needed”'
+			},
+			{
+				author: {
+					about: 'Our doctor',
+					name: 'Dr. Shimanta',
+					picture: {
+						srcset: [
+							{
+								density: 1,
+								url: `${root}images/dr-schimanta.png`
+							},
+							{
+								density: 1.5,
+								url: `${root}images/dr-schimanta@1.5x.png`
+							},
+							{
+								density: 2,
+								url: `${root}images/dr-schimanta@2x.png`
+							},
+							{
+								density: 3,
+								url: `${root}images/dr-schimanta@3x.png`
+							},
+							{
+								density: 4,
+								url: `${root}images/dr-schimanta@4x.png`
+							}
+						],
+						title: 'Dr. Shimanta',
+						webpset: [
+							{
+								density: 1,
+								url: `${root}images/dr-schimanta.webp`
+							},
+							{
+								density: 1.5,
+								url: `${root}images/dr-schimanta@1.5x.webp`
+							},
+							{
+								density: 2,
+								url: `${root}images/dr-schimanta@2x.webp`
+							},
+							{
+								density: 3,
+								url: `${root}images/dr-schimanta@3x.webp`
+							},
+							{
+								density: 4,
+								url: `${root}images/dr-schimanta@4x.webp`
+							}
+						]
+					}
+				},
+				review: '“Healthycarely is an website and mobile app for you to feel better or get medical help. We offer you a 24/7 doctor service with no appointment needed. Healthycarely is an website and mobile app for you to feel better or get medical help. We offer you a 24/7 doctor service with no appointment needed”'
 			}
 		]
 	},

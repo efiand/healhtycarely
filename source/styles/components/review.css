@@ -9,34 +9,60 @@
 }
 
 .review__picture {
-	width: 420px;
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 268px;
+	max-width: 100%;
 	height: var(--height);
+	margin: 0 auto;
 	box-shadow: inset 0 0 0 2px var(--color-primary);
+
+	@media (--tablet-desktop) {
+		width: 420px;
+	}
 
 	& img {
 		display: block;
 		width: 100%;
 		height: 100%;
-		margin: -12px 0 0 -12px;
+		transform: translate(-12px, -12px);
 	}
 }
 
 .review__quote {
 	display: flex;
 	flex-direction: column;
-	margin: 8px 75px 10px 0;
+	margin: 20px 0;
+
+	@media (--desktop) {
+		margin: 8px 75px 10px 0;
+	}
 }
 
 .review__text {
-	margin: 0;
-	font-size: 25px;
-	line-height: 40px;
+	display: -webkit-box; /* stylelint-disable-line */
+	-webkit-box-orient: vertical;
+	height: 8em;
+	margin: 0 0 40px;
+	overflow: hidden;
+	font-size: 18px;
+	line-height: 1.6;
 	letter-spacing: 0.03em;
+	-webkit-line-clamp: var(--rows);
+
+	@media (--tablet-desktop) {
+		font-size: 25px;
+	}
+
+	@media (--desktop) {
+		margin-bottom: 0;
+	}
 }
 
 .review__author {
 	margin-top: auto;
-	margin-right: inherit;
+	margin-right: 120px;
 	font-weight: 700;
 	font-style: normal;
 	line-height: 1;

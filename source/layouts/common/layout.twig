@@ -28,6 +28,9 @@
 		{% if IS_DEV %}
 			<script src="{{ root }}scripts/dev.min.js"></script>
 		{% endif %}
+		<script>
+			window.root = '{{ root }}';
+		</script>
 		<script src="{{ root }}scripts/scripts.min.js"></script>
 	</body>
 </html>

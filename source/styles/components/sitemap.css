@@ -1,13 +1,21 @@
 .sitemap__groups {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -70px 0 0 -70px;
+	margin: -30px 0 0 -30px;
 	padding: 0;
 	list-style: none;
+
+	@media (--desktop) {
+		margin-left: -70px;
+	}
 }
 
 .sitemap__group {
-	margin: 70px 0 0 70px;
+	margin: 30px 0 0 30px;
+
+	@media (--desktop) {
+		margin-left: 70px;
+	}
 }
 
 .sitemap__heading {

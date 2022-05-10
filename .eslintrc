@@ -1,5 +1,8 @@
 {
 	"extends": "pineglade",
+	"globals": {
+		"Swiper": "readonly"
+	},
 	"overrides": [
 		{
 			"files": "api/data/**/*.js",

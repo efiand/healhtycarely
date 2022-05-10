@@ -1,4 +1,8 @@
-import Form from './components/form.js';
+import PageHeader from './components/page-header.js';
+import Slider from './components/slider.js';
 import { setupComponent } from './common/utils.js';
 
-[['.form', Form]].forEach(setupComponent);
+[
+	['.page-header', PageHeader],
+	['.slider__body', Slider]
+].forEach(setupComponent);

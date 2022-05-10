@@ -1,6 +1,10 @@
 .cards__section-header {
-	margin: 0 0 50px;
+	margin: 0 0 25px;
 	text-align: center;
+
+	@media (--desktop) {
+		margin-bottom: 50px;
+	}
 }
 
 .cards__list {

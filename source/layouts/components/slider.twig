@@ -3,13 +3,17 @@
 <section class="slider {{ cssMix }}">
 	{{ component('section-header', header, 'slider__header') }}
 
-	<ul class="slider__list">
-		<li class="slider__item">
-			{% for slide in slides %}
-				{{ component(slot, slide, 'slider__slide') }}
-			{% endfor %}
-		</li>
-	</ul>
+	<div class="slider__bg-wrapper">
+		<div class="slider__body">
+			<ul class="slider__list">
+				{% for slide in slides %}
+					<li class="slider__item">
+						{{ component(slot, slide, 'slider__slide') }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 
 	<button class="slider__control slider__control--prev" type="button" disabled>
 		<span class="visually-hidden">{{ Term('SLIDER_PREV')|punctify }}</span>
