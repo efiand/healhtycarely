@@ -15,6 +15,6 @@ createServer(async (req, res) => {
 		if (process.env.NODE_ENV === 'development') {
 			const message = `API is running at ${new Date().toISOString()} on ${API_URL}`;
 
-			await promises.writeFile('./api/restart.log', message);
+			await promises.writeFile('./logs/api.log', message);
 		}
 	});

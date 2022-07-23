@@ -1,11 +1,11 @@
+*.log
+*.sublime*
 .DS_Store
+.env
 .idea
 .vscode
-*.log
-.env
-*.sublime*
-__MACOS*
-npm-debug.*
 Thumbs.db
-node_modules/
+__MACOS*
 build/
+node_modules/
+npm-debug.*

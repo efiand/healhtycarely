@@ -1,0 +1,30 @@
+server {
+  listen 443;
+  listen [::]:443;
+  server_name www.healhtycarely.local healhtycarely.local;
+	return 301 http://healhtycarely.local$request_uri;
+}
+
+server {
+  listen 80;
+  server_name www.healhtycarely.local healhtycarely.local;
+  access_log /home/efiand/projects/healhtycarely/logs/access.log;
+  error_log /home/efiand/projects/healhtycarely/logs/error.log;
+
+  # Без www
+  if ($host ~* www\.(.*)) {
+    set $host_without_www $1;
+    rewrite ^(.*)$ http://$host_without_www$1 permanent;
+  }
+
+  # Без слэша на конце
+  if (!-f $request_filename) {
+    rewrite ^/(.*)/$ /$1 permanent;
+  }
+
+  location / {
+    root /home/efiand/projects/healhtycarely/build;
+    index index.html;
+    error_page 404 404.html;
+  }
+}
